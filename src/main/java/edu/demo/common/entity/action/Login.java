@@ -29,12 +29,12 @@ public class Login extends BaseAction {
 
 	@Override
 	public BaseAction actionSuccess() {
-		return new Login();
+		return this;
 	}
 
 	@Override
 	public BaseAction actionFail() {
-		return new Login();
+		return this;
 	}
 
 }

@@ -4,6 +4,20 @@ public class User {
 	private String id;
 	private String loginName;
 	private String password;
+	private boolean online;
+
+	public User() {
+	}
+
+	public User(String id) {
+		this.id = id;
+	}
+
+	public User(String id, String loginName, String password) {
+		this.id = id;
+		this.loginName = loginName;
+		this.password = password;
+	}
 
 	public String getId() {
 		return id;
@@ -27,6 +41,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public boolean isOnline() {
+		return online;
+	}
+
+	public void setOnline(boolean online) {
+		this.online = online;
 	}
 
 	@Override
@@ -56,8 +78,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", loginName=" + loginName + ", password="
-				+ password + "]";
+		return "User [id=" + id + ", loginName=" + loginName + ", password=" + password + ", online=" + online + "]";
 	}
 
 }
